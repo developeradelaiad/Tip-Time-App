@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cost_ed_tx"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter The Cost Servise"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="5dp"
+        android:text="How was the servise?"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/group_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp">
+
+        <RadioButton
+            android:id="@+id/amazing_btn"
+            style="@style/rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amazing + 20%" />
+
+        <RadioButton
+            android:id="@+id/good_btn"
+            style="@style/rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good + 18%" />
+
+        <RadioButton
+            android:id="@+id/ok_btn"
+            style="@style/rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok + 15%" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/round_switch"
+        style="@style/rb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:checked="true"
+        android:text="Round Up Tip?" />
+
+    <Button
+        android:id="@+id/calculate_btn"
+        style="@style/rb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/tip_tx"
+        style="@style/rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginHorizontal="16dp"
+        android:text="Tip Amount" />
+</LinearLayout>
