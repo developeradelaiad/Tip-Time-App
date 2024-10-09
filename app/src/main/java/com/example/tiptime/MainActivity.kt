@@ -28,8 +28,13 @@ class MainActivity : AppCompatActivity() {
         binding.tipTx.text = "$total L.E"
 
         binding.calculateBtn.setOnClickListener {
-            val tip = binding.costEdTx.text.toString().toDouble()
-            
+            val tip = binding.costEdTx.text.toString().toDoubleOrNull()
+
+            val tip1 :Double
+            if (tip == null) {
+                Toast.makeText(this, "Its Empty!", Toast.LENGTH_SHORT).show()
+                tip1 = tip!!
+            }
             val cost = when (binding.groupBtn.checkedRadioButtonId) {
                 R.id.amazing_btn -> 0.20
                 R.id.good_btn -> 0.18
